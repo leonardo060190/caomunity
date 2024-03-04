@@ -8,20 +8,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name ="state")
+@Table(name = "state")
 public class State {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name ="id")
+    @Column(name = "id")
     private Long id;
 
-        @Column(name = "nome", nullable = false, length = 250)
+    @Column(name = "nome", nullable = false, length = 250)
     private String nome;
 
-    @Column(name ="ativo", nullable = false, columnDefinition = "boolean defaut true")
+    @Column(name = "ativo", nullable = false, columnDefinition = "boolean default true")
     private boolean ativo = true;
-
 
     public Long getId() {
         return this.id;
